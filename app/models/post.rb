@@ -8,7 +8,8 @@ class Post < ActiveRecord::Base
   clickbait = ["Won't Believe", "Secret", "Top[number", "Guess"]
   
   def clickbait?
-    if clickbait.none? {|param| param.title}
+    if clickbait.none? {|word| word == title}
+      
       binding.pry 
     else 
       
