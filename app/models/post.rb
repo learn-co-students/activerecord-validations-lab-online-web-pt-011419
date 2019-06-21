@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
 
     private
     def clickbait_title
+        binding.pry
         unless title.include? "Won't Believe" || "Secret" || "Top" || "Guess"
             errors.add(:title, "title is not clickbaity") 
         end
